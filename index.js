@@ -1,10 +1,10 @@
 // Write your solution in this file!
 // Declare customerName in global scope
-let customerName = 'bob';  // Global variable
+var customerName = 'bob';  // Global variable
 
 // 1) returns the customerName:
-function getCustomerName() {
-  return customerName; // Returns the value of customerName
+function upperCaseCustomerName() {
+  return customerName = customerName.toUpperCase // Returns the value of customerName
 }
 
 // 2) modifies the customerName variable:
@@ -13,25 +13,23 @@ function upperCaseCustomerName() {
 }
 
 // 3) setBestCustomer:
-let bestCustomer;
+var bestCustomer;
 
 function setBestCustomer() {
-  bestCustomer = customerName; // Sets bestCustomer to customerName
+  bestCustomer = "not bob"; // Sets bestCustomer to customerName
 }
 
 // 4) overwrites the best customer:
 function overwriteBestCustomer() {
-  bestCustomer = 'Alice'; // Overwrites bestCustomer
+  bestCustomer = "maybe bob"; 
+  
 }
 
 // 5) unsuccessfully tries to reassign the least favorite customer:
 const leastFavoriteCustomer = 'Charlie'; // `const` makes it unmodifiable
 
 function changeLeastFavoriteCustomer() {
-  try {
-    leastFavoriteCustomer = 'Dave';  // Attempting reassignment
-  } catch (e) {
-    console.error('Error:', e.message); // Catch the error and log it
-  }
+  leastFavoriteCustomer = "Dave"; // This will throw an error
 }
+
 
